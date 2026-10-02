@@ -1,25 +1,14 @@
 import type { Metadata } from "next";
-import { Sora, Inter, JetBrains_Mono, Lora } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 
-const sora = Sora({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-sora",
-  display: "swap",
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
@@ -33,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <ClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body
-          className={`${sora.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
+          className={`${dmSans.variable} font-sans antialiased`}
         >
           <ThemeProvider
             attribute="class"
