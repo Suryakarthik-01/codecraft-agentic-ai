@@ -98,3 +98,26 @@ export const DEFAULT_GENERATION_OPTIONS: GenerationOptions = {
   language: "typescript",
   styling: "tailwind",
 };
+
+/** Skeleton cards for the kanban board rendered in the landing-page workspace preview. */
+export const KANBAN_PREVIEW = [
+  {
+    title: "Todo",
+    cards: [{ titleWidth: "55%", bodyWidth: "88%" }],
+  },
+  {
+    title: "In Progress",
+    cards: [
+      { titleWidth: "50%", bodyWidth: "84%" },
+      { titleWidth: "58%", bodyWidth: "70%" },
+    ],
+  },
+  {
+    title: "Done",
+    cards: [
+      { titleWidth: "60%", bodyWidth: "86%" },
+      { titleWidth: "45%", bodyWidth: "72%" },
+      { titleWidth: "62%", bodyWidth: "80%" },
+    ],
+  },
+] as const;
