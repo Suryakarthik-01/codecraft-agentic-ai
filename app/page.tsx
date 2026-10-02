@@ -271,15 +271,15 @@ export default function LandingPage() {
         <div className="mx-auto max-w-3xl">
           {STEPS.map((step, i) => (
             <div key={step.number} className="flex gap-6">
-              <div className="flex flex-col items-center">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/4">
+              <div className="flex shrink-0 flex-col items-center">
+                <div className="flex size-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/4">
                   <span className="font-mono text-xs font-semibold text-white/50">
                     {step.number}
                   </span>
                 </div>
 
                 {i < STEPS.length - 1 && (
-                  <div className="mt-2 h-full w-px bg-white/6" />
+                  <div className="mt-2 w-px flex-1 bg-white/6" />
                 )}
               </div>
 

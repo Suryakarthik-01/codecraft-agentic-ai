@@ -8,7 +8,7 @@ export default function Header() {
     <header className="fixed w-full top-0 left-0 right-0 bg-white/7 z-50 h-16 border-b border-white/6 backdrop-blur-md ">
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6">
         <Link href="/">
-          <Image src={"/logo.png"} alt="dot dev" height={100} width={150} />
+          <Image src={"/logo.png"} alt="dot dev" height={100} width={100} />
         </Link>
         <div className="flex items-center gap-5">
           <Show when="signed-in">
