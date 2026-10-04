@@ -13,7 +13,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Dot Dev — The AI App Builder",
+  title: "Forge — The AI App Builder",
   description: "Turn your ideas into apps with AI.",
 };
 

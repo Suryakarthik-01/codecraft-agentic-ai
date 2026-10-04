@@ -31,7 +31,7 @@ import {
   BlueTitle,
   GrayTitle,
   SectionLabel,
-  SectionHeading
+  SectionHeading,
 } from "@/components/ui/reusables";
 
 export default function LandingPage() {
@@ -43,7 +43,7 @@ export default function LandingPage() {
   const [placeholderIndex, setPlaceholderIndex] = useState(0);
   const [attachments, setAttachments] = useState<File[]>([]);
   const [options, setOptions] = useState<GenerationOptions>(
-    DEFAULT_GENERATION_OPTIONS
+    DEFAULT_GENERATION_OPTIONS,
   );
 
   useEffect(() => {
@@ -319,8 +319,8 @@ export default function LandingPage() {
               ? has?.({ plan: "pro" })
                 ? "pro"
                 : has?.({ plan: "starter" })
-                ? "starter"
-                : "free"
+                  ? "starter"
+                  : "free"
               : null;
 
             const isActive = isSignedIn && activePlanKey === plan.key;
@@ -337,7 +337,7 @@ export default function LandingPage() {
                   "relative flex flex-col rounded-2xl border p-7 transition-colors",
                   plan.featured
                     ? "border-blue-500/25 bg-blue-500/4"
-                    : "border-white/8 bg-[#0f0f0f]"
+                    : "border-white/8 bg-[#0f0f0f]",
                 )}
               >
                 {/* Most popular pill */}
@@ -390,13 +390,13 @@ export default function LandingPage() {
                       <div
                         className={cn(
                           "flex h-4 w-4 shrink-0 items-center justify-center rounded-full",
-                          plan.featured ? "bg-blue-500/15" : "bg-white/8"
+                          plan.featured ? "bg-blue-500/15" : "bg-white/8",
                         )}
                       >
                         <Check
                           className={cn(
                             "h-2.5 w-2.5",
-                            plan.featured ? "text-blue-400" : "text-white/50"
+                            plan.featured ? "text-blue-400" : "text-white/50",
                           )}
                         />
                       </div>
@@ -454,7 +454,7 @@ export default function LandingPage() {
                           "w-full rounded-full text-sm font-semibold transition-all",
                           plan.featured
                             ? "bg-blue-500 text-white hover:bg-blue-400 active:scale-95"
-                            : "border border-white/10 bg-transparent text-white/60 hover:bg-white/6 hover:text-white/90"
+                            : "border border-white/10 bg-transparent text-white/60 hover:bg-white/6 hover:text-white/90",
                         )}
                         variant="ghost"
                       >
@@ -469,7 +469,7 @@ export default function LandingPage() {
                           "w-full rounded-full text-sm font-semibold transition-all",
                           plan.featured
                             ? "bg-blue-500 text-white hover:bg-blue-400 active:scale-95"
-                            : "border border-white/10 bg-transparent text-white/60 hover:bg-white/6 hover:text-white/90"
+                            : "border border-white/10 bg-transparent text-white/60 hover:bg-white/6 hover:text-white/90",
                         )}
                         variant="ghost"
                       >
